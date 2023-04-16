@@ -1,6 +1,12 @@
 import '../styles/button.css'
 
-const Button = ({children}) => {
+const Button = ({
+  children,
+  primary,
+  secondary,
+  rounded,
+  outline
+  }) => {
   return (
     <button>{children}</button>
   )
