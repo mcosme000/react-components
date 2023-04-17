@@ -1,5 +1,5 @@
 import Button from './components/button'
-
+import { AiOutlineCalendar, AiOutlinePlus } from 'react-icons/ai'
 
 const App = () => {
   return (
@@ -7,7 +7,14 @@ const App = () => {
       <h1>App</h1>
       <div>
         <div>
-          <Button primary large rounded>Primary button</Button>
+          <Button large rounded primary>
+            <AiOutlineCalendar className=""/>
+            Primary button</Button>
+        </div>
+        <div>
+          <Button success large rounded>
+            <AiOutlinePlus/>
+            Primary button</Button>
         </div>
         <div>
           <Button secondary large rounded>Secondary button</Button>

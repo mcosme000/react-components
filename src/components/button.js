@@ -12,11 +12,11 @@ const Button = ({
   small
   }) => {
 
-  const classes = classnames('px-3 py-2 text-sm tracking-wide shadow-custom border-black border-2 mb-3 text-white', {
+  const classes = classnames('flex items-center px-3 py-2 text-sm tracking-wide shadow-custom border-black border-2 mb-3', {
     'text-black': primary,
-    'bg-gray-700': secondary,
-    'bg-blue-500': success,
-    'bg-red-600': cancel,
+    'bg-gray-700 text-white': secondary,
+    'bg-blue-500 text-white': success,
+    'bg-red-600 text-white': cancel,
     'rounded-md': rounded,
     'rounded-full': pill,
     'max-w-xs': large,
