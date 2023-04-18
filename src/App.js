@@ -1,53 +1,28 @@
-import Button from './components/button'
-import { AiOutlineCalendar, AiOutlinePlus } from 'react-icons/ai'
+import ButtonPage from './pages/ButtonPage'
+import Accordion from './components/Accordion'
 
 const App = () => {
 
-  const handleClick = () => {
-    console.log("Click!");
-  }
-
-  const handleMouseEnter = () => {
-    console.log("Hovering now!!");
-  }
+  const items = [
+    {
+      label: 'Lemon Tarts',
+      content: 'THe lemon is amazin in tarts and smells good'
+    },
+    {
+      label: 'About Tailwind',
+      content: 'Best practices and things to avoid while using Tailwind'
+    },
+    {
+      label: 'Can I use CSS on a project?',
+      content: 'Should I go to CSS or use SASS?'
+    }
+  ]
 
   return (
     <div className="p-5">
-      <h1>App</h1>
-      <div>
-        <div>
-          <Button large rounded primary onClick={handleClick}>
-            <AiOutlineCalendar/>
-            Primary button</Button>
-        </div>
-        <div>
-          <Button success large rounded onMouseEnter={handleMouseEnter}>
-            <AiOutlinePlus/>
-            Primary button</Button>
-        </div>
-        <div>
-          <Button secondary large rounded>Secondary button</Button>
-        </div>
-        <div>
-          <Button success large>Success button</Button>
-        </div>
-        <div>
-          <Button cancel large rounded>Cancel button</Button>
-        </div>
-        <div>
-          <Button small primary rounded>Small primary</Button>
-        </div>
-        <div>
-          <Button small secondary rounded>Small secondary</Button>
-        </div>
-        <div>
-          <Button small success pill>Small success</Button>
-        </div>
-        <div>
-          <Button small cancel>Small cancel</Button>
-        </div>
+      <Accordion items={items}/>
+      <ButtonPage />
 
-      </div>
     </div>
   )
 }
