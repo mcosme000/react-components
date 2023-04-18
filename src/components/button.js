@@ -9,10 +9,11 @@ const Button = ({
   rounded,
   pill,
   large,
-  small
+  small,
+  ...rest
   }) => {
 
-  const classes = classnames('flex items-center px-3 py-2 text-sm tracking-wide shadow-custom border-black border-2 mb-3', {
+  const classes = classnames(rest.className, 'flex items-center px-3 py-2 text-sm tracking-wide shadow-custom border-black border-2 mb-3', {
     'text-black': primary,
     'bg-gray-700 text-white': secondary,
     'bg-blue-500 text-white': success,
@@ -24,7 +25,7 @@ const Button = ({
     });
 
   return (
-    <button className={classes}>{children}</button>
+    <button {...rest} className={classes}>{children}</button>
   )
 }
 

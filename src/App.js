@@ -2,17 +2,26 @@ import Button from './components/button'
 import { AiOutlineCalendar, AiOutlinePlus } from 'react-icons/ai'
 
 const App = () => {
+
+  const handleClick = () => {
+    console.log("Click!");
+  }
+
+  const handleMouseEnter = () => {
+    console.log("Hovering now!!");
+  }
+
   return (
     <div className="p-5">
       <h1>App</h1>
       <div>
         <div>
-          <Button large rounded primary>
-            <AiOutlineCalendar className=""/>
+          <Button large rounded primary onClick={handleClick}>
+            <AiOutlineCalendar/>
             Primary button</Button>
         </div>
         <div>
-          <Button success large rounded>
+          <Button success large rounded onMouseEnter={handleMouseEnter}>
             <AiOutlinePlus/>
             Primary button</Button>
         </div>
