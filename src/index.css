@@ -6,3 +6,7 @@ button > svg {
   font-size: 18px;
   margin-right: 6px;
 }
+
+.components > div {
+  margin-bottom: 20px;
+}

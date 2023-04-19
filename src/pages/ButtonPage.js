@@ -12,7 +12,7 @@ const ButtonPage = () => {
   }
 
   return (
-    <div>
+    <div className="p-5">
       <div>
         <Button large rounded primary onClick={handleClick}>
           <AiOutlineCalendar/>

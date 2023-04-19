@@ -7,7 +7,7 @@ const App = () => {
     {
       id: 1,
       label: 'Lemon Tarts',
-      content: 'THe lemon is amazin in tarts and smells good'
+      content: 'The lemon is amazin in tarts and smells good'
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const App = () => {
   ]
 
   return (
-    <div className="p-5">
+    <div className="components">
       <Accordion items={items}/>
       <ButtonPage />
 
