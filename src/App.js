@@ -1,6 +1,12 @@
 import Dropdown from './components/Dropdown'
+import { useState } from 'react';
 
 const App = () => {
+  const [selection, setSelection] = useState(null);
+
+  const handleSelect = (option) => {
+    setSelection(option.label)
+  }
 
   const options = [
     {
@@ -28,7 +34,10 @@ const App = () => {
 
   return (
     <div className="components m-3">
-      <Dropdown options={options}/>
+      <Dropdown
+        options={options}
+        selection={selection}
+        onSelect={handleSelect}/>
     </div>
   )
 }

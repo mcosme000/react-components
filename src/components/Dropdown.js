@@ -1,19 +1,19 @@
 import { useState } from 'react'
 
-const Dropdown = ({options}) => {
+const Dropdown = ({options, selection, onSelect}) => {
   const [show, setShow] = useState(false)
-  const [option, setOption] = useState('')
 
   const showDropdown = () => {
     setShow(!show)
   }
 
   const handleOption = (option) => {
-    setOption(option.label)
     setShow(false)
+    onSelect(option);
   }
 
-  const select = option || 'Select'
+  const select = selection || 'Select'
+
   const renderOptions = options.map((option, index) => {
     return (
       <div key={index}>
