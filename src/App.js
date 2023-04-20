@@ -27,7 +27,7 @@ const App = () => {
 
 
   return (
-    <div className="components">
+    <div className="components m-3">
       <Dropdown options={options}/>
     </div>
   )
