@@ -1,6 +1,5 @@
 import { BiCaretDown, BiCaretUp } from "react-icons/bi";
 import { useState } from 'react'
-import '../styles/accordion.css'
 
 const Accordion = ({ items }) => {
   // we set the first section as expanded
