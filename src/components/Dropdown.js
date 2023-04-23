@@ -11,6 +11,10 @@ const Dropdown = ({options, selection, onSelect}) => {
   // this gets called when we first load the screen
   useEffect(() => {
     const handler = (event) => {
+      // first we check if there is a reference in the component.
+      if (!divEl.current) {
+        return;
+      }
       // if the click is not inside the dropdown, we want to hide it.
       if (!divEl.current.contains(event.target)) {
         setShow(false)
