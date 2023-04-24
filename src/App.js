@@ -1,4 +1,7 @@
 import Link from './components/link'
+import Route from './components/route'
+import AccordionPage from './pages/AccordionPage'
+import DropdownPage from './pages/DropDownPage'
 
 const App = () => {
 
@@ -9,6 +12,14 @@ const App = () => {
         <Link to="/button">Button</Link>
         <Link to="/accordion">Accordion</Link>
         <Link to="/dropdown">Dropdown</Link>
+        <div>
+          <Route path="/accordion">
+            <AccordionPage/>
+          </Route>
+          <Route path="/dropdown">
+            <DropdownPage />
+          </Route>
+        </div>
       </div>
     </div>
   )

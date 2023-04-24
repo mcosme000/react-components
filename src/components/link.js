@@ -11,7 +11,7 @@ const Link = ({ to, children }) => {
   }
 
   return (
-    <a onClick={handleClick}>{children}</a>
+    <a onClick={handleClick} href={to}>{children}</a>
   )
 }
 
