@@ -17,9 +17,13 @@ const NavigationProvider = ({children}) => {
     }
   }, []);
 
+  const Navigate = (to) => {
+    window.history.pushState({}, '', to);
+    setCurrentPath(to)
+  }
+
   return (
-    <NavigationContext.Provider value={{}}>
-      {currentPath}
+    <NavigationContext.Provider value={{ currentPath, Navigate }}>
       {children}
     </NavigationContext.Provider>
   )
