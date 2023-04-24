@@ -17,6 +17,8 @@ const NavigationProvider = ({children}) => {
     }
   }, []);
 
+  // Updates the currentPath
+  // Updates the address bar
   const Navigate = (to) => {
     window.history.pushState({}, '', to);
     setCurrentPath(to)
